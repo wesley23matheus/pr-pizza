@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Div Animada</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-image:url('images/pizza.png');
+    }
+
+    .moving-div .pizza {    
+      width: 100px;
+      height: 100px;
+      position:fixed;
+      top:0;
+      left:0;
+      animation-name: move;
+      position: absolute;
+      animation-duration: 8s;
+      animation-iteration-count: infinite; 
+    }
+
+    @keyframes move {
+      0% {
+        top: 0%;
+        left: 0%;
+        transform:translateX(0%) translateY(0%);
+        background-color: black;
+      }
+      25% {
+        top:0%;
+        left: 100%;
+        transform: translateX(-100%)translateY(0%);
+        background-color : green;
+        
+      }
+      50% {
+        left:100%;
+        top: 100%;
+        transform: translateX(-100%)translateY(-100%);
+        background-color : red;
+      }
+      75% {
+        left: 0%;
+        top: 100%;
+        transform: translateX(0%)translateY(-100%);
+        background-color :yellow;
+      }
+      100% {
+        left: 0;
+        top: 0%;
+        transform: translateX(0%)translateY(0%);
+        background-color:blue;
+      }
+    }
+
+    
+  </style>
+</head>
+<body>
+  <div class="moving-div">
+    <img class="pizza" src="images/pizza.png">
+  </div>
+</body>
+</html>
+
+
